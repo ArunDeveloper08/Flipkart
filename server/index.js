@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors())
 app.use('/', Router) 
 Connection();
- const PORT=8000;
+ const PORT=process.env.PORT || 8000;
  
 app.listen(PORT,()=> console.log(`server is running Sucessfully ${PORT}`)
 ) 
